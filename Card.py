@@ -5,6 +5,7 @@ class Card:
     card_Num = -1
 
     def _init_(self, card_Type, card_Num):
+        #Tubble data structure; constant list cannot change
         card_Types_List = ('Spades','Hearts', "Clubs","Diamonds")
         self.card_Type = random.choice(card_Types_List)
         self.card_Num = random.randint(1,13)
