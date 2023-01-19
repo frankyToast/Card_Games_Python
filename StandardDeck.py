@@ -15,9 +15,12 @@ class StandardDeck:
         
     def pullFromTop(self):
         if len(self.deck) > 0:
-            return self.deck.pop(0) 
+            return self.deck.pop(0)
 
-    # def shuffle(self):
-    #     for i in range(52):
-    #         temp = self.deck[i]
-    #         self.deck[i]= self.deck[random.randint(1,13)]
+    def shuffle(self):
+        for i in range(len(self.deck)):
+            switch_place = random.randint(0,len(self.deck)-1)
+
+            temp = self.deck[i]
+            self.deck[i] = self.deck[switch_place]
+            self.deck[switch_place] = temp
