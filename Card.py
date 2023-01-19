@@ -1,17 +1,25 @@
 import random
 
 class Card:
-    card_type = ""
-    card_Num = -1
-
-    def _init_(self, card_Type, card_Num):
-        #Tubble data structure; constant list cannot change
-        card_Types_List = ('Spades','Hearts', "Clubs","Diamonds")
-        self.card_Type = random.choice(card_Types_List)
-        self.card_Num = random.randint(1,13)
-
-    def get_Type(self):
-        return self.card_Type
+    def __init__(self,suit,num) -> None:
+        self.suit_type = suit
+        self.card_Num = num
+        
+    def get_Suit(self):
+        return self.suit_type
     
     def get_Num(self):
-        return self.card_Num
+        match self.card_Num:
+            case 11:
+                return 'Jack'
+            case 12:
+                return 'Queen'
+            case 13:
+                return 'King'
+            case 1:
+                return 'Ace'
+            case _:
+                return self.card_Num
+
+    def __str__(self) -> str:
+        return str(self.suit_type)
