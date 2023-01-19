@@ -23,4 +23,4 @@ class StandardDeck:
 
             temp = self.deck[i]
             self.deck[i] = self.deck[switch_place]
-            self.deck[switch_place] = temp
+            self.deck[switch_place] = temp 
