@@ -22,4 +22,4 @@ class Card:
                 return self.card_Num
 
     def __str__(self) -> str:
-        return str(self.suit_type)
+        return (f'{self.get_Num()} of {self.get_Suit()}')
