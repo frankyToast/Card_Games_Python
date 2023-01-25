@@ -1,4 +1,4 @@
-from Card import Card
+import Card
 import random
 
 class StandardDeck:
